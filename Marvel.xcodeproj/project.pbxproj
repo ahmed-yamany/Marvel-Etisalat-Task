@@ -25,7 +25,9 @@
 		EE8C905B2C46D97300A90677 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90572C46D97300A90677 /* SeriesViewController.swift */; };
 		EE8C905D2C46D97300A90677 /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90592C46D97300A90677 /* SeriesViewModel.swift */; };
 		EE8C905F2C46D97900A90677 /* SeriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */; };
-		EE8C90622C46DA7F00A90677 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C90612C46DA7F00A90677 /* Coordinator */; };
+		EE8C90862C46E4D800A90677 /* Coordinator in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90782C46E4D700A90677 /* Coordinator */; };
+		EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908A2C46E50F00A90677 /* Coordinator */; };
+		EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +44,6 @@
 		EE33B5672C466D3F00E9C350 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EE33B5682C466D9D00E9C350 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		EE33B5692C466D9D00E9C350 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
-		EE8C90402C46D4C800A90677 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		EE8C90442C46D56000A90677 /* MarvelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCoordinator.swift; sourceTree = "<group>"; };
 		EE8C90462C46D67D00A90677 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EE8C904A2C46D75300A90677 /* SceneDelegateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateCommand.swift; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		EE8C90572C46D97300A90677 /* SeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 		EE8C90592C46D97300A90677 /* SeriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesUseCase.swift; sourceTree = "<group>"; };
+		EE8C90782C46E4D700A90677 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
+		EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CompositionalLayoutableSection; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE8C90622C46DA7F00A90677 /* Coordinator in Frameworks */,
+				EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */,
+				EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +124,8 @@
 		EE33B5572C466C6600E9C350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EE8C90402C46D4C800A90677 /* Coordinator */,
+				EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */,
+				EE8C90782C46E4D700A90677 /* Coordinator */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -247,7 +252,8 @@
 			);
 			name = Marvel;
 			packageProductDependencies = (
-				EE8C90612C46DA7F00A90677 /* Coordinator */,
+				EE8C908A2C46E50F00A90677 /* Coordinator */,
+				EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */,
 			);
 			productName = Marvel;
 			productReference = EE33B51F2C46629100E9C350 /* Marvel.app */;
@@ -278,6 +284,8 @@
 				ar,
 			);
 			mainGroup = EE33B5162C46629100E9C350;
+			packageReferences = (
+			);
 			productRefGroup = EE33B5202C46629100E9C350 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,6 +303,7 @@
 				EE33B5642C466CFB00E9C350 /* .swiftlint.yml in Resources */,
 				EE33B55A2C466C9000E9C350 /* Colors.xcassets in Resources */,
 				EE33B5632C466CFB00E9C350 /* swiftgen.yml in Resources */,
+				EE8C90862C46E4D800A90677 /* Coordinator in Resources */,
 				EE33B55E2C466CA200E9C350 /* Localizable.strings in Resources */,
 				EE33B52F2C46629200E9C350 /* Assets.xcassets in Resources */,
 			);
@@ -580,9 +589,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EE8C90612C46DA7F00A90677 /* Coordinator */ = {
+		EE8C908A2C46E50F00A90677 /* Coordinator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Coordinator;
+		};
+		EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CompositionalLayoutableSection;
 		};
 /* End XCSwiftPackageProductDependency section */
 
