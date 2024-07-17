@@ -22,7 +22,7 @@ final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
+        view = SeriesView(viewModel: viewModel)
+        viewModel.viewDidLoad()
     }
 }

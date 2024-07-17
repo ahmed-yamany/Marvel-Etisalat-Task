@@ -17,6 +17,8 @@
 		EE33B5642C466CFB00E9C350 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE33B5622C466CFB00E9C350 /* .swiftlint.yml */; };
 		EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33B5682C466D9D00E9C350 /* Fonts+Generated.swift */; };
 		EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33B5692C466D9D00E9C350 /* Strings+Generated.swift */; };
+		EE80A3882C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80A3862C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift */; };
+		EE80A3892C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE80A3872C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib */; };
 		EE8C90452C46D56000A90677 /* MarvelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90442C46D56000A90677 /* MarvelCoordinator.swift */; };
 		EE8C90482C46D67D00A90677 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90462C46D67D00A90677 /* Logger.swift */; };
 		EE8C904B2C46D75300A90677 /* SceneDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C904A2C46D75300A90677 /* SceneDelegateCommand.swift */; };
@@ -28,6 +30,14 @@
 		EE8C90862C46E4D800A90677 /* Coordinator in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90782C46E4D700A90677 /* Coordinator */; };
 		EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908A2C46E50F00A90677 /* Coordinator */; };
 		EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */; };
+		EE8C90952C46E64700A90677 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90922C46E64700A90677 /* SeriesView.swift */; };
+		EE8C909A2C46EA8700A90677 /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90992C46EA8700A90677 /* SeriesCollectionViewCell.xib */; };
+		EE8C909B2C46EA8700A90677 /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90972C46EA8700A90677 /* SeriesCollectionViewCell.swift */; };
+		EE8C909C2C46EA8700A90677 /* SeriesCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90982C46EA8700A90677 /* SeriesCollectionViewSection.swift */; };
+		EEA0C7402C47B39500FFEBF0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73B2C47B39500FFEBF0 /* Poppins-Bold.ttf */; };
+		EEA0C7412C47B39500FFEBF0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */; };
+		EEA0C7422C47B39500FFEBF0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */; };
+		EEA0C7432C47B39500FFEBF0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,8 @@
 		EE33B5672C466D3F00E9C350 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EE33B5682C466D9D00E9C350 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		EE33B5692C466D9D00E9C350 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		EE80A3862C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesExpandedCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE80A3872C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesExpandedCollectionViewCell.xib; sourceTree = "<group>"; };
 		EE8C90442C46D56000A90677 /* MarvelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCoordinator.swift; sourceTree = "<group>"; };
 		EE8C90462C46D67D00A90677 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EE8C904A2C46D75300A90677 /* SceneDelegateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateCommand.swift; sourceTree = "<group>"; };
@@ -54,6 +66,14 @@
 		EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesUseCase.swift; sourceTree = "<group>"; };
 		EE8C90782C46E4D700A90677 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CompositionalLayoutableSection; sourceTree = "<group>"; };
+		EE8C90922C46E64700A90677 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
+		EE8C90972C46EA8700A90677 /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE8C90982C46EA8700A90677 /* SeriesCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewSection.swift; sourceTree = "<group>"; };
+		EE8C90992C46EA8700A90677 /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		EEA0C73B2C47B39500FFEBF0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +179,36 @@
 		EE33B5602C466CCD00E9C350 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EEA0C73F2C47B39500FFEBF0 /* Poppins */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EE80A38A2C4816A600D05F68 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EE80A38C2C4816B300D05F68 /* Series */,
+				EE80A38B2C4816A900D05F68 /* Expandable */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EE80A38B2C4816A900D05F68 /* Expandable */ = {
+			isa = PBXGroup;
+			children = (
+				EE80A3862C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift */,
+				EE80A3872C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib */,
+			);
+			path = Expandable;
+			sourceTree = "<group>";
+		};
+		EE80A38C2C4816B300D05F68 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				EE8C90992C46EA8700A90677 /* SeriesCollectionViewCell.xib */,
+				EE8C90972C46EA8700A90677 /* SeriesCollectionViewCell.swift */,
+			);
+			path = Series;
 			sourceTree = "<group>";
 		};
 		EE8C90412C46D4E700A90677 /* Scenes */ = {
@@ -211,6 +259,8 @@
 		EE8C90542C46D96500A90677 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EE8C90962C46EA5900A90677 /* Sections */,
+				EE8C90922C46E64700A90677 /* SeriesView.swift */,
 				EE8C90592C46D97300A90677 /* SeriesViewModel.swift */,
 				EE8C90572C46D97300A90677 /* SeriesViewController.swift */,
 				EE8C90562C46D97300A90677 /* SeriesCoordinator.swift */,
@@ -231,6 +281,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE8C90962C46EA5900A90677 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				EE80A38A2C4816A600D05F68 /* Cells */,
+				EE8C90982C46EA8700A90677 /* SeriesCollectionViewSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		EEA0C73F2C47B39500FFEBF0 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0C73B2C47B39500FFEBF0 /* Poppins-Bold.ttf */,
+				EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */,
+				EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */,
+				EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,12 +370,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8C909A2C46EA8700A90677 /* SeriesCollectionViewCell.xib in Resources */,
 				EE33B5642C466CFB00E9C350 /* .swiftlint.yml in Resources */,
+				EEA0C7432C47B39500FFEBF0 /* Poppins-SemiBold.ttf in Resources */,
 				EE33B55A2C466C9000E9C350 /* Colors.xcassets in Resources */,
+				EE80A3892C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib in Resources */,
+				EEA0C7402C47B39500FFEBF0 /* Poppins-Bold.ttf in Resources */,
 				EE33B5632C466CFB00E9C350 /* swiftgen.yml in Resources */,
 				EE8C90862C46E4D800A90677 /* Coordinator in Resources */,
+				EEA0C7412C47B39500FFEBF0 /* Poppins-Medium.ttf in Resources */,
 				EE33B55E2C466CA200E9C350 /* Localizable.strings in Resources */,
 				EE33B52F2C46629200E9C350 /* Assets.xcassets in Resources */,
+				EEA0C7422C47B39500FFEBF0 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8C90452C46D56000A90677 /* MarvelCoordinator.swift in Sources */,
+				EE8C909B2C46EA8700A90677 /* SeriesCollectionViewCell.swift in Sources */,
+				EE8C909C2C46EA8700A90677 /* SeriesCollectionViewSection.swift in Sources */,
 				EE8C905D2C46D97300A90677 /* SeriesViewModel.swift in Sources */,
 				EE8C905F2C46D97900A90677 /* SeriesUseCase.swift in Sources */,
 				EE33B5232C46629100E9C350 /* AppDelegate.swift in Sources */,
 				EE8C904E2C46D7DB00A90677 /* MarvelCoordinatorCommand.swift in Sources */,
 				EE8C905A2C46D97300A90677 /* SeriesCoordinator.swift in Sources */,
+				EE80A3882C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift in Sources */,
 				EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */,
 				EE33B52D2C46629100E9C350 /* Marvel.xcdatamodeld in Sources */,
 				EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */,
@@ -370,6 +449,7 @@
 				EE8C905B2C46D97300A90677 /* SeriesViewController.swift in Sources */,
 				EE33B5252C46629100E9C350 /* SceneDelegate.swift in Sources */,
 				EE8C90482C46D67D00A90677 /* Logger.swift in Sources */,
+				EE8C90952C46E64700A90677 /* SeriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
