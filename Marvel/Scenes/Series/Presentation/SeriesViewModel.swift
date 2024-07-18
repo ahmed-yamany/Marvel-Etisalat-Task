@@ -45,7 +45,7 @@ final class SeriesViewModel: SeriesViewModelProtocol {
             do {
                 let seriesEntities = try await useCase.getSeries(at: paginationOffset)
                 let seriesSections = seriesEntities.map { $0.asSeriesCollectionViewSection(delegate: self) }
-                sections.replaceOrAppend(contentsOf: seriesSections, by: \.id)
+                sections.append(contentsOf: seriesSections)
             } catch {
                 print(error.localizedDescription)
             }

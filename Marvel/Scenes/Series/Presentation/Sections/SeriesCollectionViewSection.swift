@@ -74,6 +74,7 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDataSourc
 
     private func expandableCell(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(ExpandedCellType.self, for: indexPath)
+        cell.isExpanded = isExpanded
         return cell
     }
 }
@@ -117,19 +118,8 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDelegate 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let expandedCellIndexPath = IndexPath(row: expandableCellIndexInSection, section: indexPath.section)
-
-        guard let cellToExpand = collectionView.cellForItem(at: expandedCellIndexPath) as? ExpandedCellType else {
-            Logger.log(
-                "Failed to Down Cast UICollectionViewCell to \(ExpandedCellType.identifier)",
-                category: \.default,
-                level: .fault
-            )
-            return
-        }
-
         isExpanded.toggle()
-        cellToExpand.isExpanded = isExpanded
-        collectionView.reloadItems(at: [expandedCellIndexPath])
+        collectionView.reloadSections(IndexSet(integer: indexPath.section))
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

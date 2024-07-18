@@ -54,7 +54,6 @@
 		EEE6CC852C498A5800E8E89C /* MarvelAPIReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC842C498A5800E8E89C /* MarvelAPIReponse.swift */; };
 		EEE6CC8A2C498D3200E8E89C /* SeriesEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC892C498D3200E8E89C /* SeriesEntityMapper.swift */; };
 		EEE6CC8C2C498D5E00E8E89C /* SeriesCollectionViewSectionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC8B2C498D5E00E8E89C /* SeriesCollectionViewSectionMapper.swift */; };
-		EEE6CC912C499EF700E8E89C /* Array+replaceOrAppend.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC902C499EF700E8E89C /* Array+replaceOrAppend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +106,6 @@
 		EEE6CC842C498A5800E8E89C /* MarvelAPIReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIReponse.swift; sourceTree = "<group>"; };
 		EEE6CC892C498D3200E8E89C /* SeriesEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEntityMapper.swift; sourceTree = "<group>"; };
 		EEE6CC8B2C498D5E00E8E89C /* SeriesCollectionViewSectionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewSectionMapper.swift; sourceTree = "<group>"; };
-		EEE6CC902C499EF700E8E89C /* Array+replaceOrAppend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+replaceOrAppend.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,7 +380,6 @@
 			children = (
 				EEE6CC672C497BB300E8E89C /* String+toMD5.swift */,
 				EEE6CC7B2C49876B00E8E89C /* Collection+safe.swift */,
-				EEE6CC902C499EF700E8E89C /* Array+replaceOrAppend.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -597,7 +594,6 @@
 				EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */,
 				EE33B52D2C46629100E9C350 /* Marvel.xcdatamodeld in Sources */,
 				EEE6CC832C498A1C00E8E89C /* SeriesResultMapper.swift in Sources */,
-				EEE6CC912C499EF700E8E89C /* Array+replaceOrAppend.swift in Sources */,
 				EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */,
 				EE8C904B2C46D75300A90677 /* SceneDelegateCommand.swift in Sources */,
 				EEE6CC7A2C4984C700E8E89C /* SeriesEntity.swift in Sources */,
