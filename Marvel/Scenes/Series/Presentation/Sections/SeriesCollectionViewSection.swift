@@ -8,19 +8,29 @@
 import CompositionalLayoutableSection
 import UIKit
 
+protocol SeriesCollectionViewSectionDelegate: AnyObject {
+    func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didDisplaySectionAt index: Int)
+}
+
 // MARK: - A custom section for displaying Series in a collection view.
 // Every Section represents a one series
 // Section Consists of Two Cells
 // cell for series card that contains "thumbnail, name, rate, year"
 // expandable cell for show series more details
-class SeriesCollectionViewSection: CompositionalLayoutableSection {
+class SeriesCollectionViewSection: CompositionalLayoutableSection, Identifiable {
     typealias SeriesCellType = SeriesCollectionViewCell
     typealias ExpandedCellType = SeriesExpandedCollectionViewCell
 
     var expandableCellIndexInSection: Int = 1
     var isExpanded = false
-
-    override init() {
+    
+    let entity: SeriesEntity
+    var id: UUID { entity.id }
+    weak var seriesDelegate: SeriesCollectionViewSectionDelegate?
+    
+    init(entity: SeriesEntity, seriesDelegate: SeriesCollectionViewSectionDelegate) {
+        self.entity = entity
+        self.seriesDelegate = seriesDelegate
         super.init()
         delegate = self
         dataSource = self
@@ -46,7 +56,7 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDataSourc
 
     private func seriesCell(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(SeriesCellType.self, for: indexPath)
-
+        cell.update(with: entity)
         return cell
     }
 
@@ -108,5 +118,9 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDelegate 
         isExpanded.toggle()
         cellToExpand.isExpanded = isExpanded
         collectionView.reloadItems(at: [expandedCellIndexPath])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        seriesDelegate?.seriesCollectionViewSection(self, didDisplaySectionAt: indexPath.section)
     }
 }

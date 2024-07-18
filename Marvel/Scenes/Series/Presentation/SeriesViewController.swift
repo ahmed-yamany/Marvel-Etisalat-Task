@@ -28,7 +28,7 @@ final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewCont
         
         Task {
             do {
-                print(try await MarvelAPIClient<SeriesEndPoint, SeriesData>().request(SeriesEndPoint()))
+//                print(try await )
             } catch {
                 print(error.localizedDescription)
             }

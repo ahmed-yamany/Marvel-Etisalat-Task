@@ -38,4 +38,10 @@ class MarvelAPIEndPointDecorator: MarvelAPIEndPoint {
             "hash": hash
         ]
     }
+    
+    public func updateQueries(with queries: Parameters) {
+        queries.forEach { key, value in
+            self.query?[key] = value
+        }
+    }
 }

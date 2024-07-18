@@ -23,7 +23,6 @@ open class AlamofireAPIClient<
         let method: HTTPMethod = endpoint.method.asHTTPMethod()
         let encoding = encoding(for: method)
         let parameters = parameters(for: endpoint)
-        print(ResponseType.self)
         return try await withCheckedThrowingContinuation { continuation in
             AF.request(
                 endpoint.url,
@@ -36,7 +35,8 @@ open class AlamofireAPIClient<
                     case let .success(data):
                         continuation.resume(returning: data)
                     case let .failure(error):
-                        if let data = response.data, let errorResponse = try? JSONDecoder().decode(ErrorResponseType.self, from: data) {
+                        if let data = response.data,
+                           let errorResponse = try? JSONDecoder().decode(ErrorResponseType.self, from: data) {
                             continuation.resume(throwing: errorResponse)
                         } else {
                             continuation.resume(throwing: error)

@@ -27,16 +27,25 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     init(coordinator: SeriesCoordinatorProtocol, useCase: SeriesUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
-        sections = [SeriesCollectionViewSection(), SeriesCollectionViewSection()]
     }
 
     func viewDidLoad() {
         Task {
             do {
-                sections = try await useCase.getSeries()
+                let seriesEntities = try await useCase.getSeries()
+                let seriesSections = seriesEntities.map { $0.asSeriesCollectionViewSection(delegate: self) }
+                sections = seriesSections
             } catch {
                 
             }
+        }
+    }
+}
+
+extension SeriesViewModel: SeriesCollectionViewSectionDelegate {
+    func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didDisplaySectionAt index: Int) {
+        if index == sections.count - 5 {
+            print(index)
         }
     }
 }

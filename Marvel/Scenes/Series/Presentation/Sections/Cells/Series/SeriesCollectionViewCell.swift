@@ -27,6 +27,12 @@ class SeriesCollectionViewCell: UICollectionViewCell {
         yearLabel.text = "2023"
     }
     
+    public func update(with entity: SeriesEntity) {
+        nameLabel.text = entity.title
+        ratingLabel.text = entity.rate
+        yearLabel.text = entity.year
+    }
+    
     // MARK: - Update Cell
     private func updateCell() {
         updateThumbnailImage()

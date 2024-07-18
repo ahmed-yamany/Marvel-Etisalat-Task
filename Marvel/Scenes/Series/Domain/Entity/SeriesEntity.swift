@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct SeriesEntity: Hashable {
+struct SeriesEntity: Identifiable, Equatable {
+    let id: UUID
     let title: String
+    let rate: String
+    let year: String
 }
