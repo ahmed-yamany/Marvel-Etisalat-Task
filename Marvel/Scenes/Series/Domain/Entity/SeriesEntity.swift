@@ -12,4 +12,5 @@ struct SeriesEntity: Identifiable, Equatable {
     let title: String
     let rate: String
     let year: String
+    let imageUrl: String
 }

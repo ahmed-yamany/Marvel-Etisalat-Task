@@ -20,7 +20,8 @@ final class SeriesCoordinator: SeriesCoordinatorProtocol {
     
     func start() {
         let repository = SeriesRepository()
-        let useCase = SeriesUseCase(repository: repository)
+        let imageUseCase = ImageUseCase()
+        let useCase = SeriesUseCase(repository: repository, imageUseCase: imageUseCase)
         let viewModel = SeriesViewModel(coordinator: self, useCase: useCase)
         let controller = SeriesViewController(viewModel: viewModel)
         router.setViewController(controller)

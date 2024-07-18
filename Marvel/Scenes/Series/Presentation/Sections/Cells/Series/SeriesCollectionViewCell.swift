@@ -22,15 +22,16 @@ class SeriesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         updateCell()
-        nameLabel.text = "Batman"
-        ratingLabel.text = "4.1"
-        yearLabel.text = "2023"
     }
     
     public func update(with entity: SeriesEntity) {
         nameLabel.text = entity.title
         ratingLabel.text = entity.rate
         yearLabel.text = entity.year
+    }
+    
+    public func updateThumbnail(with image: UIImage) {
+        thumbnailImageView.image = image
     }
     
     // MARK: - Update Cell
@@ -46,6 +47,7 @@ class SeriesCollectionViewCell: UICollectionViewCell {
         thumbnailImageView.layer.cornerRadius = 8
         thumbnailImageView.layer.borderColor = UIColor.mlPrimary.cgColor
         thumbnailImageView.layer.borderWidth = 1
+        thumbnailImageView.image = .seriesThmbnailPlaceholder
     }
     
     private func updateNameLabel() {

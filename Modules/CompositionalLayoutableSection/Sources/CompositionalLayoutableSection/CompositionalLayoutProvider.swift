@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 public protocol CompositionalLayoutProvider: AnyObject {
     var compositionalLayoutSections: [CompositionalLayoutableSection] { get set }
 }

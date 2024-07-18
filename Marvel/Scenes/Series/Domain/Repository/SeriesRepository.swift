@@ -8,12 +8,12 @@
 import Foundation
 
 protocol SeriesRepositoryProtocol {
-    func getSeries() async throws -> [SeriesResult]
+    func getSeries(at page: Int) async throws -> [SeriesResult]
 }
 
 final class SeriesRepository: MarvelAPIClient<SeriesEndPoint, SeriesData>, SeriesRepositoryProtocol {
     
-    func getSeries() async throws -> [SeriesResult] {
-        try await self.request(SeriesEndPoint()).data.asSeriesResults()
+    func getSeries(at page: Int) async throws -> [SeriesResult] {
+        try await self.request(SeriesEndPoint(offset: page)).data.asSeriesResults()
     }
 }

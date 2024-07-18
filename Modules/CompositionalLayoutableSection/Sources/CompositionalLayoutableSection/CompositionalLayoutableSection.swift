@@ -31,6 +31,7 @@ public protocol UICompositionalLayoutableSectionLayout: AnyObject {
  - You can create multiple objects Inherets from this class
    and switch between them to show different sections in the same collection view,
  */
+@MainActor
 open class CompositionalLayoutableSection: NSObject {
     open weak var dataSource: (any UICompositionalLayoutableSectionDataSource)?
     open weak var prefetchDataSource: (any UICompositionalLayoutableSectionDataSourcePrefetching)?

@@ -17,11 +17,13 @@ extension SeriesResult: SeriesEntityMapper {
         let title: String = self.title ?? ""
         let rate: String = self.rating?.rawValue ?? ""
         let year: String = String(endYear ?? startYear ?? 0)
+        let imageUrl = thumbnail?.path ?? ""
         return SeriesEntity(
             id: id,
             title: title,
             rate: rate,
-            year: year
+            year: year,
+            imageUrl: imageUrl
         )
     }
 }

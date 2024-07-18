@@ -6,21 +6,29 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SeriesUseCaseProtocol {
-    func getSeries() async throws -> [SeriesEntity]
+    func getSeries(at page: Int) async throws -> [SeriesEntity]
+    func fetchImage(from urlString: String) async throws -> UIImage
 }
 
 final class SeriesUseCase: SeriesUseCaseProtocol {
     let repository: SeriesRepositoryProtocol
+    let imageUseCase: ImageUseCaseProtocol
     
-    init(repository: SeriesRepositoryProtocol) {
+    init(repository: SeriesRepositoryProtocol, imageUseCase: ImageUseCaseProtocol) {
         self.repository = repository
+        self.imageUseCase = imageUseCase
     }
     
-    func getSeries() async throws -> [SeriesEntity] {
-        let seriesResults = try await repository.getSeries()
-        let seriesEntities = seriesResults.map { $0.asSeriesEntity() }
+    func getSeries(at page: Int) async throws -> [SeriesEntity] {
+        let seriesResults: [SeriesResult] = try await repository.getSeries(at: page)
+        let seriesEntities: [SeriesEntity] = seriesResults.map { $0.asSeriesEntity() }
         return seriesEntities
+    }
+    
+    func fetchImage(from urlString: String) async throws -> UIImage {
+        try await imageUseCase.fetchImage(from: urlString)
     }
 }

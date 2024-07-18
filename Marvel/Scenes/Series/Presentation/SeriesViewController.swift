@@ -25,13 +25,5 @@ final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewCont
         super.viewDidLoad()
         view = SeriesView(viewModel: viewModel)
         viewModel.viewDidLoad()
-        
-        Task {
-            do {
-//                print(try await )
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
     }
 }
