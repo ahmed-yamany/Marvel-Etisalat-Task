@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlamofireAPIClient
 
 final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewController {
     
@@ -24,5 +25,13 @@ final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewCont
         super.viewDidLoad()
         view = SeriesView(viewModel: viewModel)
         viewModel.viewDidLoad()
+        
+        Task {
+            do {
+                print(try await MarvelAPIClient<SeriesEndPoint, SeriesData>().request(SeriesEndPoint()))
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }

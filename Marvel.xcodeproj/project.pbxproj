@@ -38,6 +38,16 @@
 		EEA0C7412C47B39500FFEBF0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */; };
 		EEA0C7422C47B39500FFEBF0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */; };
 		EEA0C7432C47B39500FFEBF0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */; };
+		EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */; };
+		EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */; };
+		EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */; };
+		EEE6CC682C497BB300E8E89C /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC672C497BB300E8E89C /* String+toMD5.swift */; };
+		EEE6CC6A2C497C6400E8E89C /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC692C497C6400E8E89C /* MarvelAPIClient.swift */; };
+		EEE6CC6D2C49806D00E8E89C /* SeriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC6C2C49806D00E8E89C /* SeriesData.swift */; };
+		EEE6CC6F2C49808D00E8E89C /* SeriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC6E2C49808D00E8E89C /* SeriesResult.swift */; };
+		EEE6CC742C49846600E8E89C /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = EEE6CC732C49846600E8E89C /* APIClient */; };
+		EEE6CC772C49847300E8E89C /* AlamofireAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = EEE6CC762C49847300E8E89C /* AlamofireAPIClient */; };
+		EEE6CC7A2C4984C700E8E89C /* SeriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +84,16 @@
 		EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEndPoint.swift; sourceTree = "<group>"; };
+		EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPoint.swift; sourceTree = "<group>"; };
+		EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPointDecorator.swift; sourceTree = "<group>"; };
+		EEE6CC672C497BB300E8E89C /* String+toMD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
+		EEE6CC692C497C6400E8E89C /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
+		EEE6CC6C2C49806D00E8E89C /* SeriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesData.swift; sourceTree = "<group>"; };
+		EEE6CC6E2C49808D00E8E89C /* SeriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesResult.swift; sourceTree = "<group>"; };
+		EEE6CC722C49845000E8E89C /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIClient; sourceTree = "<group>"; };
+		EEE6CC752C49846C00E8E89C /* AlamofireAPIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AlamofireAPIClient; sourceTree = "<group>"; };
+		EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +102,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */,
+				EEE6CC742C49846600E8E89C /* APIClient in Frameworks */,
 				EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */,
+				EEE6CC772C49847300E8E89C /* AlamofireAPIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +136,7 @@
 		EE33B5212C46629100E9C350 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				EEE6CC5C2C4965F600E8E89C /* Data */,
 				EE8C90422C46D51600A90677 /* App */,
 				EE8C90412C46D4E700A90677 /* Scenes */,
 				EE33B5332C46629200E9C350 /* Info.plist */,
@@ -136,6 +159,7 @@
 		EE33B5562C466C5700E9C350 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				EEE6CC662C497BA900E8E89C /* Extensions */,
 				EE8C90472C46D67D00A90677 /* Logger */,
 			);
 			path = Utilites;
@@ -144,6 +168,8 @@
 		EE33B5572C466C6600E9C350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EEE6CC752C49846C00E8E89C /* AlamofireAPIClient */,
+				EEE6CC722C49845000E8E89C /* APIClient */,
 				EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */,
 				EE8C90782C46E4D700A90677 /* Coordinator */,
 			);
@@ -250,6 +276,7 @@
 		EE8C904F2C46D94400A90677 /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				EEE6CC5B2C4965E800E8E89C /* Data */,
 				EE8C90552C46D96A00A90677 /* Domain */,
 				EE8C90542C46D96500A90677 /* Presentation */,
 			);
@@ -271,6 +298,7 @@
 		EE8C90552C46D96A00A90677 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EEE6CC782C4984BE00E8E89C /* Entity */,
 				EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */,
 			);
 			path = Domain;
@@ -303,6 +331,58 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		EEE6CC5B2C4965E800E8E89C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC6B2C49806100E8E89C /* Model */,
+				EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EEE6CC5C2C4965F600E8E89C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC5F2C496B8800E8E89C /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EEE6CC5F2C496B8800E8E89C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */,
+				EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */,
+				EEE6CC692C497C6400E8E89C /* MarvelAPIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EEE6CC662C497BA900E8E89C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC672C497BB300E8E89C /* String+toMD5.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEE6CC6B2C49806100E8E89C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC6C2C49806D00E8E89C /* SeriesData.swift */,
+				EEE6CC6E2C49808D00E8E89C /* SeriesResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEE6CC782C4984BE00E8E89C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +404,8 @@
 			packageProductDependencies = (
 				EE8C908A2C46E50F00A90677 /* Coordinator */,
 				EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */,
+				EEE6CC732C49846600E8E89C /* APIClient */,
+				EEE6CC762C49847300E8E89C /* AlamofireAPIClient */,
 			);
 			productName = Marvel;
 			productReference = EE33B51F2C46629100E9C350 /* Marvel.app */;
@@ -438,16 +520,24 @@
 				EE8C909C2C46EA8700A90677 /* SeriesCollectionViewSection.swift in Sources */,
 				EE8C905D2C46D97300A90677 /* SeriesViewModel.swift in Sources */,
 				EE8C905F2C46D97900A90677 /* SeriesUseCase.swift in Sources */,
+				EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */,
 				EE33B5232C46629100E9C350 /* AppDelegate.swift in Sources */,
+				EEE6CC6F2C49808D00E8E89C /* SeriesResult.swift in Sources */,
 				EE8C904E2C46D7DB00A90677 /* MarvelCoordinatorCommand.swift in Sources */,
+				EEE6CC6A2C497C6400E8E89C /* MarvelAPIClient.swift in Sources */,
+				EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */,
 				EE8C905A2C46D97300A90677 /* SeriesCoordinator.swift in Sources */,
 				EE80A3882C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift in Sources */,
+				EEE6CC682C497BB300E8E89C /* String+toMD5.swift in Sources */,
 				EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */,
 				EE33B52D2C46629100E9C350 /* Marvel.xcdatamodeld in Sources */,
 				EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */,
 				EE8C904B2C46D75300A90677 /* SceneDelegateCommand.swift in Sources */,
+				EEE6CC7A2C4984C700E8E89C /* SeriesEntity.swift in Sources */,
+				EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */,
 				EE8C905B2C46D97300A90677 /* SeriesViewController.swift in Sources */,
 				EE33B5252C46629100E9C350 /* SceneDelegate.swift in Sources */,
+				EEE6CC6D2C49806D00E8E89C /* SeriesData.swift in Sources */,
 				EE8C90482C46D67D00A90677 /* Logger.swift in Sources */,
 				EE8C90952C46E64700A90677 /* SeriesView.swift in Sources */,
 			);
@@ -676,6 +766,14 @@
 		EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CompositionalLayoutableSection;
+		};
+		EEE6CC732C49846600E8E89C /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APIClient;
+		};
+		EEE6CC762C49847300E8E89C /* AlamofireAPIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlamofireAPIClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -8,9 +8,12 @@
 import Foundation
 
 protocol SeriesUseCaseProtocol {
-    
+    func getSeries() async throws -> [SeriesCollectionViewSection]
 }
 
 final class SeriesUseCase: SeriesUseCaseProtocol {
-    
+    func getSeries() async throws -> [SeriesCollectionViewSection] {
+        [
+        ]
+    }
 }

@@ -11,16 +11,15 @@ import CompositionalLayoutableSection
 
 @MainActor
 protocol SeriesViewModelProtocol: ObservableObject {
-    var sectionsPublisher: AnyPublisher<[CompositionalLayoutableSection], Never> { get }
+    var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { get }
     
     func viewDidLoad()
 }
 
 @MainActor
 final class SeriesViewModel: SeriesViewModelProtocol {
-    @Published var sections: [CompositionalLayoutableSection] = []
-    var sectionsPublisher: AnyPublisher<[CompositionalLayoutableSection], Never> { $sections.eraseToAnyPublisher() }
-    let seriesSection = SeriesCollectionViewSection()
+    @Published var sections: [SeriesCollectionViewSection] = []
+    var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { $sections.eraseToAnyPublisher() }
     
     private let coordinator: SeriesCoordinatorProtocol
     private let useCase: SeriesUseCaseProtocol
@@ -32,5 +31,12 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     }
 
     func viewDidLoad() {
+        Task {
+            do {
+                sections = try await useCase.getSeries()
+            } catch {
+                
+            }
+        }
     }
 }
