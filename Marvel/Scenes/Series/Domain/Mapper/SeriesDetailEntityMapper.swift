@@ -16,7 +16,9 @@ extension SeriesResult: SeriesDetailEntityMapper {
         let id = self.id ?? UUID().hashValue
         return SeriesDetailEntity(
             id: id,
-            description: description ?? ""
+            description: description ?? "",
+            startYear: String(startYear ?? 0),
+            endYear: String(endYear ?? 0)
         )
     }
 }

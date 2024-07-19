@@ -14,7 +14,7 @@ protocol SeriesViewModelProtocol: ObservableObject {
     var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { get }
     var paginationOffset: Int { get set }
     var searchText: String { get set }
-    
+    var loaderState: CurrentValueSubject<Bool, Never> { get }
     func viewDidLoad()
 }
 
@@ -28,6 +28,7 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     }
     @Published var searchText: String = ""
     var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { $sections.eraseToAnyPublisher() }
+    var loaderState: CurrentValueSubject<Bool, Never> = .init(false)
     
     private var searchTextCancellable: Cancellable?
     private let coordinator: SeriesCoordinatorProtocol
@@ -43,6 +44,7 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     }
     
     private func getSeries() {
+        loaderState.send(true)
         Task {
             do {
                 let seriesEntities = try await useCase.getSeries(contains: searchText, at: paginationOffset)
@@ -51,6 +53,7 @@ final class SeriesViewModel: SeriesViewModelProtocol {
             } catch {
                 print(error.localizedDescription)
             }
+            loaderState.send(false)
         }
     }
     
@@ -97,7 +100,6 @@ extension SeriesViewModel: SeriesCollectionViewSectionDelegate {
     private func fetchImage(for section: SeriesCollectionViewSection) {
         Task {
             do {
-                // by the way all series image is not available
                 let image = try await useCase.fetchImage(from: section.entity.imageUrl)
                 section.updateThumbnail(with: image)
             } catch {

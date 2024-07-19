@@ -238,18 +238,18 @@
 			isa = PBXGroup;
 			children = (
 				EE80A38C2C4816B300D05F68 /* Series */,
-				EE80A38B2C4816A900D05F68 /* Expandable */,
+				EE80A38B2C4816A900D05F68 /* SeriesDetail */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		EE80A38B2C4816A900D05F68 /* Expandable */ = {
+		EE80A38B2C4816A900D05F68 /* SeriesDetail */ = {
 			isa = PBXGroup;
 			children = (
 				EE80A3862C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift */,
 				EE80A3872C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib */,
 			);
-			path = Expandable;
+			path = SeriesDetail;
 			sourceTree = "<group>";
 		};
 		EE80A38C2C4816B300D05F68 /* Series */ = {

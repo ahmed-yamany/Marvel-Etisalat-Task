@@ -92,7 +92,7 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDataSourc
     private func expandableCell(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(ExpandedCellType.self, for: indexPath)
         cell.isExpanded = isExpanded
-        print(detailEntity)
+        cell.update(with: detailEntity)
         return cell
     }
 }

@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
-import AlamofireAPIClient
+import Combine
 
 final class SeriesViewController: UIViewController {
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
+    var loaderCancellable: Cancellable?
     
     let viewModel: any SeriesViewModelProtocol
     
@@ -23,15 +25,41 @@ final class SeriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = L10n.marvel
         view = SeriesView(viewModel: viewModel)
         viewModel.viewDidLoad()
         addSearchBar()
+        bindLoaderState()
     }
     
     private func addSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         search.searchBar.delegate = self
         self.navigationItem.searchController = search
+    }
+    
+    private func bindLoaderState() {
+        loaderCancellable = viewModel.loaderState.sink { [weak self] loading in
+            guard let self else { return }
+            if loading {
+                startLoading()
+            } else {
+                stopLoading()
+            }
+        }
+    }
+    
+    private func startLoading() {
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        activityIndicator.startAnimating()
+    }
+    
+    private func stopLoading() {
+        activityIndicator.removeFromSuperview()
+        activityIndicator.stopAnimating()
     }
 }
 

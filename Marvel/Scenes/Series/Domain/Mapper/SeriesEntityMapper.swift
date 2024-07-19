@@ -17,7 +17,14 @@ extension SeriesResult: SeriesEntityMapper {
         let title: String = self.title ?? ""
         let rate: String = self.rating?.rawValue ?? ""
         let year: String = String(endYear ?? startYear ?? 0)
-        let imageUrl = thumbnail?.path ?? ""
+        
+        var imageUrl: String = ""
+        if let thumbnail,
+           let path = thumbnail.path,
+           let imageExtension = thumbnail.thumbnailExtension {
+            imageUrl = "\(path).\(imageExtension)"
+        }
+        
         return SeriesEntity(
             id: id,
             seriesId: self.id ?? UUID().hashValue,

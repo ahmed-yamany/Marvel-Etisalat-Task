@@ -10,6 +10,15 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// End Year
+  internal static let endYear = L10n.tr("Localizable", "end-year", fallback: "End Year")
+  /// Localizable.strings
+  ///   Marvel
+  /// 
+  ///   Created by Ahmed Yamany on 16/07/2024.
+  internal static let marvel = L10n.tr("Localizable", "marvel", fallback: "Marvel")
+  /// Start Year
+  internal static let startYear = L10n.tr("Localizable", "start-year", fallback: "Start Year")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

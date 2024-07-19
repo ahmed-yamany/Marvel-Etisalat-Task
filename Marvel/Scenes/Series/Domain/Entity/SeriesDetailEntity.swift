@@ -10,4 +10,6 @@ import Foundation
 struct SeriesDetailEntity {
     let id: Int
     let description: String
+    let startYear: String
+    let endYear: String
 }
