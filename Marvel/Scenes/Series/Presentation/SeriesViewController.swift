@@ -8,11 +8,11 @@
 import SwiftUI
 import AlamofireAPIClient
 
-final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewController {
+final class SeriesViewController: UIViewController {
     
-    let viewModel: ViewModel
+    let viewModel: any SeriesViewModelProtocol
     
-    init(viewModel: ViewModel) {
+    init(viewModel: any SeriesViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,5 +25,18 @@ final class SeriesViewController<ViewModel: SeriesViewModelProtocol>: UIViewCont
         super.viewDidLoad()
         view = SeriesView(viewModel: viewModel)
         viewModel.viewDidLoad()
+        addSearchBar()
+    }
+    
+    private func addSearchBar() {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchBar.delegate = self
+        self.navigationItem.searchController = search
+    }
+}
+
+extension SeriesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchText = searchText
     }
 }

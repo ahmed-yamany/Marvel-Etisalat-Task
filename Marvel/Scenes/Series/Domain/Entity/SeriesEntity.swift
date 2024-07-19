@@ -9,6 +9,7 @@ import Foundation
 
 struct SeriesEntity: Identifiable, Equatable {
     let id: UUID
+    let seriesId: Int
     let title: String
     let rate: String
     let year: String

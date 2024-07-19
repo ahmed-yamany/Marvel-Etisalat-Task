@@ -10,13 +10,14 @@ import APIClient
 
 class MarvelAPIEndPointDecorator: MarvelAPIEndPoint {
     var path: String
-    var method: APIHTTPMethod = .get
+    var method: APIHTTPMethod
     var query: Parameters?
     var body: Parameters? = [:]
     var headers: [String: String] = [:]
     
-    init(path: String) {
+    init(path: String, method: APIHTTPMethod) {
         self.path = path
+        self.method = method
         setDefaultHeaders()
         setDefaultQueries()
     }

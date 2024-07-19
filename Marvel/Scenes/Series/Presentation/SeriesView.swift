@@ -9,7 +9,7 @@ import UIKit
 import CompositionalLayoutableSection
 import Combine
 
-class SeriesView<ViewModel: SeriesViewModelProtocol>: UICollectionView, CompositionalLayoutProvider {
+class SeriesView: UICollectionView, CompositionalLayoutProvider {
     
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
     lazy var compositionalDelegate = CompositionalLayoutDelegate(provider: self)
@@ -17,9 +17,9 @@ class SeriesView<ViewModel: SeriesViewModelProtocol>: UICollectionView, Composit
     lazy var compositionalPrefetchDataSource = CompositionalLayoutDataSourcePrefetching(provider: self)
     
     var sectionsCancellable: Cancellable!
-    let viewModel: ViewModel
+    let viewModel: any SeriesViewModelProtocol
     
-    init(viewModel: ViewModel) {
+    init(viewModel: any SeriesViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero, collectionViewLayout: .init())
         

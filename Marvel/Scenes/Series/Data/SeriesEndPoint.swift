@@ -10,7 +10,7 @@ import APIClient
 
 class SeriesEndPoint: MarvelAPIEndPointDecorator {
     init(offset: Int) {
-        super.init(path: "series")
+        super.init(path: "series", method: .get)
         let queries: Parameters = [
             "limit": 15,
             "offset": offset

@@ -13,6 +13,7 @@ import CompositionalLayoutableSection
 protocol SeriesViewModelProtocol: ObservableObject {
     var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { get }
     var paginationOffset: Int { get set }
+    var searchText: String { get set }
     
     func viewDidLoad()
 }
@@ -25,9 +26,10 @@ final class SeriesViewModel: SeriesViewModelProtocol {
             getSeries()
         }
     }
-    
+    @Published var searchText: String = ""
     var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { $sections.eraseToAnyPublisher() }
     
+    private var searchTextCancellable: Cancellable?
     private let coordinator: SeriesCoordinatorProtocol
     private let useCase: SeriesUseCaseProtocol
     
@@ -37,19 +39,32 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     }
     
     func viewDidLoad() {
-        getSeries()
+        sinkOnSearchText()
     }
     
     private func getSeries() {
         Task {
             do {
-                let seriesEntities = try await useCase.getSeries(at: paginationOffset)
+                let seriesEntities = try await useCase.getSeries(contains: searchText, at: paginationOffset)
                 let seriesSections = seriesEntities.map { $0.asSeriesCollectionViewSection(delegate: self) }
                 sections.append(contentsOf: seriesSections)
             } catch {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    private func sinkOnSearchText() {
+        searchTextCancellable = $searchText
+            .debounce(for: 1.5, scheduler: RunLoop.main)
+            .sink { [weak self] _ in
+                guard let self else {
+                    Logger.log("\(self.debugDescription) deallocated", category: \.default, level: .info)
+                    return
+                }
+                sections.removeAll()
+                getSeries()
+            }
     }
 }
 
@@ -60,15 +75,14 @@ extension SeriesViewModel: SeriesCollectionViewSectionDelegate {
             paginationOffset += 1
         }
         
-        fetchUpdateImage(for: section)
+        fetchImage(for: section)
     }
     
-    // prepare for prefetching
-    func seriesCollectionViewSectionPrefetchItems(_ section: SeriesCollectionViewSection) {
-        fetchUpdateImage(for: section)
+    func seriesCollectionViewSectionPrepareForPrefetching(_ section: SeriesCollectionViewSection) {
+        fetchImage(for: section)
     }
     
-    private func fetchUpdateImage(for section: SeriesCollectionViewSection) {
+    private func fetchImage(for section: SeriesCollectionViewSection) {
         Task {
             do {
                 // by the way all series image is not available

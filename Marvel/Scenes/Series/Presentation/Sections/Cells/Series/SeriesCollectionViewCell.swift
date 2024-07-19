@@ -53,6 +53,7 @@ class SeriesCollectionViewCell: UICollectionViewCell {
     private func updateNameLabel() {
         nameLabel.font = FontFamily.Poppins.bold.font(size: 22)
         nameLabel.textColor = .mlTextPrimary
+        nameLabel.numberOfLines = 0
     }
     
     private func updateRatingImage() {

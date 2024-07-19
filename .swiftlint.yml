@@ -14,7 +14,7 @@ opt_in_rules:
   - force_cast
   
   # Force unwrapping should be avoided
-#  - force_unwrapping
+  - force_unwrapping
   
   # Header comments should be consistent with project patterns.
   - file_header

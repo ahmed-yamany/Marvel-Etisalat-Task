@@ -28,11 +28,11 @@ class SeriesExpandedCollectionViewCell: UICollectionViewCell {
     
     public func show() {
         heightConstraint?.constant = 100
-//        isHidden = false
+        isHidden = false
     }
     
     public func hide() {
         heightConstraint?.constant = 0
-//        isHidden = true
+        isHidden = true
     }
 }

@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 
 protocol SeriesUseCaseProtocol {
-    func getSeries(at page: Int) async throws -> [SeriesEntity]
+    func getSeries(contains title: String, at page: Int) async throws -> [SeriesEntity]
     func fetchImage(from urlString: String) async throws -> UIImage
 }
 
 final class SeriesUseCase: SeriesUseCaseProtocol {
+    private var seriesEntitiesCache: [SeriesEntity] = []
+    
     let repository: SeriesRepositoryProtocol
     let imageUseCase: ImageUseCaseProtocol
     
@@ -22,9 +24,14 @@ final class SeriesUseCase: SeriesUseCaseProtocol {
         self.imageUseCase = imageUseCase
     }
     
-    func getSeries(at page: Int) async throws -> [SeriesEntity] {
+    func getSeries(contains title: String, at page: Int) async throws -> [SeriesEntity] {
         let seriesResults: [SeriesResult] = try await repository.getSeries(at: page)
-        let seriesEntities: [SeriesEntity] = seriesResults.map { $0.asSeriesEntity() }
+        var seriesEntities = seriesResults.map { $0.asSeriesEntity() }
+            
+        if !title.isEmpty {
+            seriesEntities = seriesEntities.filter {$0.title.contains(title)}
+        }
+        
         return seriesEntities
     }
     

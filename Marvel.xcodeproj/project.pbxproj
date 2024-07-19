@@ -38,6 +38,7 @@
 		EEA0C7412C47B39500FFEBF0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */; };
 		EEA0C7422C47B39500FFEBF0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */; };
 		EEA0C7432C47B39500FFEBF0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */; };
+		EEDD93062C4ABB6E00B4994F /* SeriesDetailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */; };
 		EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */; };
 		EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */; };
 		EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */; };
@@ -90,6 +91,7 @@
 		EEA0C73C2C47B39500FFEBF0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPointDecorator.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				EEE6CC812C498A1500E8E89C /* Mapper */,
 				EEE6CC6B2C49806100E8E89C /* Model */,
 				EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */,
+				EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				EEE6CC7C2C49876B00E8E89C /* Collection+safe.swift in Sources */,
 				EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */,
 				EE33B52D2C46629100E9C350 /* Marvel.xcdatamodeld in Sources */,
+				EEDD93062C4ABB6E00B4994F /* SeriesDetailEndPoint.swift in Sources */,
 				EEE6CC832C498A1C00E8E89C /* SeriesResultMapper.swift in Sources */,
 				EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */,
 				EE8C904B2C46D75300A90677 /* SceneDelegateCommand.swift in Sources */,

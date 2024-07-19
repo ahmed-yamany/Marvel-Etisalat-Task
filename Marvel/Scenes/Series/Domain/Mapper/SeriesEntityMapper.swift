@@ -20,6 +20,7 @@ extension SeriesResult: SeriesEntityMapper {
         let imageUrl = thumbnail?.path ?? ""
         return SeriesEntity(
             id: id,
+            seriesId: self.id ?? UUID().hashValue,
             title: title,
             rate: rate,
             year: year,

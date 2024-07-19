@@ -10,7 +10,7 @@ import UIKit
 
 protocol SeriesCollectionViewSectionDelegate: AnyObject {
     func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didDisplaySectionAt index: Int)
-    func seriesCollectionViewSectionPrefetchItems(_ section: SeriesCollectionViewSection)
+    func seriesCollectionViewSectionPrepareForPrefetching(_ section: SeriesCollectionViewSection)
 }
 
 // MARK: - A custom section for displaying Series in a collection view.
@@ -129,6 +129,6 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDelegate 
 
 extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        seriesDelegate?.seriesCollectionViewSectionPrefetchItems(self)
+        seriesDelegate?.seriesCollectionViewSectionPrepareForPrefetching(self)
     }
 }
