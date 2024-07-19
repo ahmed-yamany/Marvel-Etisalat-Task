@@ -39,6 +39,12 @@
 		EEA0C7422C47B39500FFEBF0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */; };
 		EEA0C7432C47B39500FFEBF0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */; };
 		EEDD93062C4ABB6E00B4994F /* SeriesDetailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */; };
+		EEDD93082C4ABD6C00B4994F /* SeriesDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93072C4ABD6C00B4994F /* SeriesDetailEntity.swift */; };
+		EEDD930A2C4ABFA100B4994F /* SeriesDetailEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93092C4ABFA100B4994F /* SeriesDetailEntityMapper.swift */; };
+		EEDD930C2C4AC05F00B4994F /* SeriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD930B2C4AC05F00B4994F /* SeriesAPIClient.swift */; };
+		EEDD930F2C4AC5DE00B4994F /* ImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD930E2C4AC5DE00B4994F /* ImageUseCase.swift */; };
+		EEDD93112C4AC68A00B4994F /* SeriesDetailAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93102C4AC68A00B4994F /* SeriesDetailAPIClient.swift */; };
+		EEDD93132C4AC7B700B4994F /* SeriesRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93122C4AC7B700B4994F /* SeriesRepositoryFactory.swift */; };
 		EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */; };
 		EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */; };
 		EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */; };
@@ -49,7 +55,6 @@
 		EEE6CC742C49846600E8E89C /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = EEE6CC732C49846600E8E89C /* APIClient */; };
 		EEE6CC772C49847300E8E89C /* AlamofireAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = EEE6CC762C49847300E8E89C /* AlamofireAPIClient */; };
 		EEE6CC7A2C4984C700E8E89C /* SeriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */; };
-		EEE6CC7C2C49876B00E8E89C /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC7B2C49876B00E8E89C /* Collection+safe.swift */; };
 		EEE6CC7E2C49889700E8E89C /* SeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC7D2C49889700E8E89C /* SeriesRepository.swift */; };
 		EEE6CC832C498A1C00E8E89C /* SeriesResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC822C498A1C00E8E89C /* SeriesResultMapper.swift */; };
 		EEE6CC852C498A5800E8E89C /* MarvelAPIReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC842C498A5800E8E89C /* MarvelAPIReponse.swift */; };
@@ -92,6 +97,12 @@
 		EEA0C73D2C47B39500FFEBF0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EEA0C73E2C47B39500FFEBF0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailEndPoint.swift; sourceTree = "<group>"; };
+		EEDD93072C4ABD6C00B4994F /* SeriesDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailEntity.swift; sourceTree = "<group>"; };
+		EEDD93092C4ABFA100B4994F /* SeriesDetailEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailEntityMapper.swift; sourceTree = "<group>"; };
+		EEDD930B2C4AC05F00B4994F /* SeriesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAPIClient.swift; sourceTree = "<group>"; };
+		EEDD930E2C4AC5DE00B4994F /* ImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUseCase.swift; sourceTree = "<group>"; };
+		EEDD93102C4AC68A00B4994F /* SeriesDetailAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailAPIClient.swift; sourceTree = "<group>"; };
+		EEDD93122C4AC7B700B4994F /* SeriesRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryFactory.swift; sourceTree = "<group>"; };
 		EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPointDecorator.swift; sourceTree = "<group>"; };
@@ -102,7 +113,6 @@
 		EEE6CC722C49845000E8E89C /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIClient; sourceTree = "<group>"; };
 		EEE6CC752C49846C00E8E89C /* AlamofireAPIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AlamofireAPIClient; sourceTree = "<group>"; };
 		EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEntity.swift; sourceTree = "<group>"; };
-		EEE6CC7B2C49876B00E8E89C /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		EEE6CC7D2C49889700E8E89C /* SeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepository.swift; sourceTree = "<group>"; };
 		EEE6CC822C498A1C00E8E89C /* SeriesResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesResultMapper.swift; sourceTree = "<group>"; };
 		EEE6CC842C498A5800E8E89C /* MarvelAPIReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIReponse.swift; sourceTree = "<group>"; };
@@ -150,8 +160,9 @@
 		EE33B5212C46629100E9C350 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				EEE6CC5C2C4965F600E8E89C /* Data */,
 				EE8C90422C46D51600A90677 /* App */,
+				EEE6CC5C2C4965F600E8E89C /* Data */,
+				EEDD930D2C4AC1C400B4994F /* Domain */,
 				EE8C90412C46D4E700A90677 /* Scenes */,
 				EE33B5332C46629200E9C350 /* Info.plist */,
 				EE33B52B2C46629100E9C350 /* Marvel.xcdatamodeld */,
@@ -348,6 +359,14 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		EEDD930D2C4AC1C400B4994F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD930E2C4AC5DE00B4994F /* ImageUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EEE6CC5B2C4965E800E8E89C /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +374,8 @@
 				EEE6CC6B2C49806100E8E89C /* Model */,
 				EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */,
 				EEDD93052C4ABB6E00B4994F /* SeriesDetailEndPoint.swift */,
+				EEDD930B2C4AC05F00B4994F /* SeriesAPIClient.swift */,
+				EEDD93102C4AC68A00B4994F /* SeriesDetailAPIClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -382,7 +403,6 @@
 			isa = PBXGroup;
 			children = (
 				EEE6CC672C497BB300E8E89C /* String+toMD5.swift */,
-				EEE6CC7B2C49876B00E8E89C /* Collection+safe.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE6CC792C4984C700E8E89C /* SeriesEntity.swift */,
+				EEDD93072C4ABD6C00B4994F /* SeriesDetailEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -408,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE6CC7D2C49889700E8E89C /* SeriesRepository.swift */,
+				EEDD93122C4AC7B700B4994F /* SeriesRepositoryFactory.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -432,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE6CC892C498D3200E8E89C /* SeriesEntityMapper.swift */,
+				EEDD93092C4ABFA100B4994F /* SeriesDetailEntityMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -585,27 +608,32 @@
 				EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */,
 				EE33B5232C46629100E9C350 /* AppDelegate.swift in Sources */,
 				EEE6CC6F2C49808D00E8E89C /* SeriesResult.swift in Sources */,
+				EEDD93132C4AC7B700B4994F /* SeriesRepositoryFactory.swift in Sources */,
 				EE8C904E2C46D7DB00A90677 /* MarvelCoordinatorCommand.swift in Sources */,
 				EEE6CC7E2C49889700E8E89C /* SeriesRepository.swift in Sources */,
 				EEE6CC6A2C497C6400E8E89C /* MarvelAPIClient.swift in Sources */,
 				EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */,
+				EEDD93082C4ABD6C00B4994F /* SeriesDetailEntity.swift in Sources */,
 				EE8C905A2C46D97300A90677 /* SeriesCoordinator.swift in Sources */,
 				EEE6CC8C2C498D5E00E8E89C /* SeriesCollectionViewSectionMapper.swift in Sources */,
 				EE80A3882C480AC100D05F68 /* SeriesExpandedCollectionViewCell.swift in Sources */,
 				EEE6CC682C497BB300E8E89C /* String+toMD5.swift in Sources */,
-				EEE6CC7C2C49876B00E8E89C /* Collection+safe.swift in Sources */,
 				EE33B56B2C466D9D00E9C350 /* Strings+Generated.swift in Sources */,
+				EEDD93112C4AC68A00B4994F /* SeriesDetailAPIClient.swift in Sources */,
 				EE33B52D2C46629100E9C350 /* Marvel.xcdatamodeld in Sources */,
 				EEDD93062C4ABB6E00B4994F /* SeriesDetailEndPoint.swift in Sources */,
 				EEE6CC832C498A1C00E8E89C /* SeriesResultMapper.swift in Sources */,
 				EE33B56A2C466D9D00E9C350 /* Fonts+Generated.swift in Sources */,
 				EE8C904B2C46D75300A90677 /* SceneDelegateCommand.swift in Sources */,
+				EEDD930C2C4AC05F00B4994F /* SeriesAPIClient.swift in Sources */,
+				EEDD930A2C4ABFA100B4994F /* SeriesDetailEntityMapper.swift in Sources */,
 				EEE6CC7A2C4984C700E8E89C /* SeriesEntity.swift in Sources */,
 				EEE6CC852C498A5800E8E89C /* MarvelAPIReponse.swift in Sources */,
 				EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */,
 				EE8C905B2C46D97300A90677 /* SeriesViewController.swift in Sources */,
 				EE33B5252C46629100E9C350 /* SceneDelegate.swift in Sources */,
 				EEE6CC6D2C49806D00E8E89C /* SeriesData.swift in Sources */,
+				EEDD930F2C4AC5DE00B4994F /* ImageUseCase.swift in Sources */,
 				EE8C90482C46D67D00A90677 /* Logger.swift in Sources */,
 				EE8C90952C46E64700A90677 /* SeriesView.swift in Sources */,
 			);

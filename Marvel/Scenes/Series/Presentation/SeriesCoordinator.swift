@@ -19,7 +19,7 @@ final class SeriesCoordinator: SeriesCoordinatorProtocol {
     }
     
     func start() {
-        let repository = SeriesRepository()
+        let repository = SeriesRepositoryFactory.make()
         let imageUseCase = ImageUseCase()
         let useCase = SeriesUseCase(repository: repository, imageUseCase: imageUseCase)
         let viewModel = SeriesViewModel(coordinator: self, useCase: useCase)

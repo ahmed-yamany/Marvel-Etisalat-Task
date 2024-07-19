@@ -11,10 +11,11 @@ import UIKit
 protocol SeriesUseCaseProtocol {
     func getSeries(contains title: String, at page: Int) async throws -> [SeriesEntity]
     func fetchImage(from urlString: String) async throws -> UIImage
+    func getSeriesDetail(by id: Int) async throws -> SeriesDetailEntity?
 }
 
 final class SeriesUseCase: SeriesUseCaseProtocol {
-    private var seriesEntitiesCache: [SeriesEntity] = []
+    private var SeriesDetailCache: [SeriesDetailEntity] = []
     
     let repository: SeriesRepositoryProtocol
     let imageUseCase: ImageUseCaseProtocol
@@ -37,5 +38,13 @@ final class SeriesUseCase: SeriesUseCaseProtocol {
     
     func fetchImage(from urlString: String) async throws -> UIImage {
         try await imageUseCase.fetchImage(from: urlString)
+    }
+    
+    func getSeriesDetail(by id: Int) async throws -> SeriesDetailEntity? {
+        if let seriesDetailEntity = SeriesDetailCache.first(where: {$0.id == id}) {
+            return seriesDetailEntity
+        } else {
+            return try await repository.getSeriesDetails(id: id)?.asSeriesDetailEntity()
+        }
     }
 }

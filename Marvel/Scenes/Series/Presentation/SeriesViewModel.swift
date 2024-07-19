@@ -82,6 +82,18 @@ extension SeriesViewModel: SeriesCollectionViewSectionDelegate {
         fetchImage(for: section)
     }
     
+    func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didExpandSeriesDetailsAt index: Int) {
+        let seriesId = section.entity.seriesId
+        Task {
+            do {
+                let detailEntity = try await useCase.getSeriesDetail(by: seriesId)
+                section.updateDetails(with: detailEntity)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     private func fetchImage(for section: SeriesCollectionViewSection) {
         Task {
             do {

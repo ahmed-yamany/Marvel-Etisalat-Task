@@ -11,6 +11,7 @@ import UIKit
 protocol SeriesCollectionViewSectionDelegate: AnyObject {
     func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didDisplaySectionAt index: Int)
     func seriesCollectionViewSectionPrepareForPrefetching(_ section: SeriesCollectionViewSection)
+    func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didExpandSeriesDetailsAt index: Int)
 }
 
 // MARK: - A custom section for displaying Series in a collection view.
@@ -27,7 +28,9 @@ class SeriesCollectionViewSection: CompositionalLayoutableSection, Identifiable 
     var isExpanded = false
 
     let entity: SeriesEntity
+    var detailEntity: SeriesDetailEntity?
     var id: UUID { entity.id }
+    
     weak var seriesDelegate: SeriesCollectionViewSectionDelegate?
 
     init(entity: SeriesEntity, seriesDelegate: SeriesCollectionViewSectionDelegate) {
@@ -47,6 +50,20 @@ class SeriesCollectionViewSection: CompositionalLayoutableSection, Identifiable 
         }
         
         cell.updateThumbnail(with: image)
+    }
+    
+    public func updateDetails(with details: SeriesDetailEntity?) {
+        self.detailEntity = details
+        guard let collectionView else {
+            Logger.log("Failed to get CollectionView", category: \.default, level: .fault)
+            return
+        }
+        
+        guard let index else {
+            Logger.log("Failed to get section index", category: \.default, level: .fault)
+            return
+        }
+        collectionView.reloadSections(IndexSet(integer: index))
     }
 }
 
@@ -75,6 +92,7 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDataSourc
     private func expandableCell(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(ExpandedCellType.self, for: indexPath)
         cell.isExpanded = isExpanded
+        print(detailEntity)
         return cell
     }
 }
@@ -99,7 +117,6 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionLayout {
     private func favouriteContextualAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: nil, handler: { _, view, completion in
             view.backgroundColor = .red
-            print("done")
             completion(true)
         })
         action.backgroundColor = .mlGold
@@ -117,9 +134,11 @@ extension SeriesCollectionViewSection: UICompositionalLayoutableSectionDelegate 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let expandedCellIndexPath = IndexPath(row: expandableCellIndexInSection, section: indexPath.section)
         isExpanded.toggle()
         collectionView.reloadSections(IndexSet(integer: indexPath.section))
+        if isExpanded {
+            seriesDelegate?.seriesCollectionViewSection(self, didExpandSeriesDetailsAt: indexPath.section)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
