@@ -65,6 +65,7 @@ final class SeriesViewModel: SeriesViewModelProtocol {
                     Logger.log("\(self.debugDescription) deallocated", category: \.default, level: .info)
                     return
                 }
+                paginationOffset = 0
                 sections.removeAll()
                 getSeries()
             }
