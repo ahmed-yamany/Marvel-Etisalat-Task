@@ -15,7 +15,7 @@ protocol SeriesUseCaseProtocol {
 }
 
 final class SeriesUseCase: SeriesUseCaseProtocol {
-    private var SeriesDetailCache: [SeriesDetailEntity] = []
+    private var seriesDetailCache: [SeriesDetailEntity] = []
     
     let repository: SeriesRepositoryProtocol
     let imageUseCase: ImageUseCaseProtocol
@@ -41,7 +41,7 @@ final class SeriesUseCase: SeriesUseCaseProtocol {
     }
     
     func getSeriesDetail(by id: Int) async throws -> SeriesDetailEntity? {
-        if let seriesDetailEntity = SeriesDetailCache.first(where: {$0.id == id}) {
+        if let seriesDetailEntity = seriesDetailCache.first(where: {$0.id == id}) {
             return seriesDetailEntity
         } else {
             return try await repository.getSeriesDetails(id: id)?.asSeriesDetailEntity()

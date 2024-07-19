@@ -27,8 +27,6 @@
 		EE8C905B2C46D97300A90677 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90572C46D97300A90677 /* SeriesViewController.swift */; };
 		EE8C905D2C46D97300A90677 /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90592C46D97300A90677 /* SeriesViewModel.swift */; };
 		EE8C905F2C46D97900A90677 /* SeriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */; };
-		EE8C90862C46E4D800A90677 /* Coordinator in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90782C46E4D700A90677 /* Coordinator */; };
-		EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908A2C46E50F00A90677 /* Coordinator */; };
 		EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */ = {isa = PBXBuildFile; productRef = EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */; };
 		EE8C90952C46E64700A90677 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90922C46E64700A90677 /* SeriesView.swift */; };
 		EE8C909A2C46EA8700A90677 /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90992C46EA8700A90677 /* SeriesCollectionViewCell.xib */; };
@@ -45,6 +43,7 @@
 		EEDD930F2C4AC5DE00B4994F /* ImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD930E2C4AC5DE00B4994F /* ImageUseCase.swift */; };
 		EEDD93112C4AC68A00B4994F /* SeriesDetailAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93102C4AC68A00B4994F /* SeriesDetailAPIClient.swift */; };
 		EEDD93132C4AC7B700B4994F /* SeriesRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD93122C4AC7B700B4994F /* SeriesRepositoryFactory.swift */; };
+		EEDD93172C4ACF5900B4994F /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EEDD93162C4ACF5900B4994F /* Coordinator */; };
 		EEE6CC5E2C49662800E8E89C /* SeriesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */; };
 		EEE6CC612C496BA000E8E89C /* MarvelAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */; };
 		EEE6CC632C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */; };
@@ -86,7 +85,6 @@
 		EE8C90572C46D97300A90677 /* SeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 		EE8C90592C46D97300A90677 /* SeriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		EE8C905E2C46D97900A90677 /* SeriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesUseCase.swift; sourceTree = "<group>"; };
-		EE8C90782C46E4D700A90677 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CompositionalLayoutableSection; sourceTree = "<group>"; };
 		EE8C90922C46E64700A90677 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
 		EE8C90972C46EA8700A90677 /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +101,7 @@
 		EEDD930E2C4AC5DE00B4994F /* ImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUseCase.swift; sourceTree = "<group>"; };
 		EEDD93102C4AC68A00B4994F /* SeriesDetailAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailAPIClient.swift; sourceTree = "<group>"; };
 		EEDD93122C4AC7B700B4994F /* SeriesRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryFactory.swift; sourceTree = "<group>"; };
+		EEDD93152C4ACF4600B4994F /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		EEE6CC5D2C49662800E8E89C /* SeriesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC602C496BA000E8E89C /* MarvelAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPoint.swift; sourceTree = "<group>"; };
 		EEE6CC622C496BCD00E8E89C /* MarvelAPIEndPointDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIEndPointDecorator.swift; sourceTree = "<group>"; };
@@ -127,8 +126,8 @@
 			files = (
 				EE8C908D2C46E51200A90677 /* CompositionalLayoutableSection in Frameworks */,
 				EEE6CC742C49846600E8E89C /* APIClient in Frameworks */,
-				EE8C908B2C46E50F00A90677 /* Coordinator in Frameworks */,
 				EEE6CC772C49847300E8E89C /* AlamofireAPIClient in Frameworks */,
+				EEDD93172C4ACF5900B4994F /* Coordinator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,10 +192,10 @@
 		EE33B5572C466C6600E9C350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EEDD93152C4ACF4600B4994F /* Coordinator */,
 				EEE6CC752C49846C00E8E89C /* AlamofireAPIClient */,
 				EEE6CC722C49845000E8E89C /* APIClient */,
 				EE8C90892C46E50000A90677 /* CompositionalLayoutableSection */,
-				EE8C90782C46E4D700A90677 /* Coordinator */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -486,10 +485,10 @@
 			);
 			name = Marvel;
 			packageProductDependencies = (
-				EE8C908A2C46E50F00A90677 /* Coordinator */,
 				EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */,
 				EEE6CC732C49846600E8E89C /* APIClient */,
 				EEE6CC762C49847300E8E89C /* AlamofireAPIClient */,
+				EEDD93162C4ACF5900B4994F /* Coordinator */,
 			);
 			productName = Marvel;
 			productReference = EE33B51F2C46629100E9C350 /* Marvel.app */;
@@ -543,7 +542,6 @@
 				EE80A3892C480AC100D05F68 /* SeriesExpandedCollectionViewCell.xib in Resources */,
 				EEA0C7402C47B39500FFEBF0 /* Poppins-Bold.ttf in Resources */,
 				EE33B5632C466CFB00E9C350 /* swiftgen.yml in Resources */,
-				EE8C90862C46E4D800A90677 /* Coordinator in Resources */,
 				EEA0C7412C47B39500FFEBF0 /* Poppins-Medium.ttf in Resources */,
 				EE33B55E2C466CA200E9C350 /* Localizable.strings in Resources */,
 				EE33B52F2C46629200E9C350 /* Assets.xcassets in Resources */,
@@ -855,13 +853,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EE8C908A2C46E50F00A90677 /* Coordinator */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Coordinator;
-		};
 		EE8C908C2C46E51200A90677 /* CompositionalLayoutableSection */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CompositionalLayoutableSection;
+		};
+		EEDD93162C4ACF5900B4994F /* Coordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinator;
 		};
 		EEE6CC732C49846600E8E89C /* APIClient */ = {
 			isa = XCSwiftPackageProductDependency;
