@@ -30,6 +30,8 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     var sectionsPublisher: AnyPublisher<[SeriesCollectionViewSection], Never> { $sections.eraseToAnyPublisher() }
     var loaderState: CurrentValueSubject<Bool, Never> = .init(false)
     
+    private var lastGetSeriesTask: Task<(), Never>?
+    private var lastSeriesDetailTask: Task<(), Never>?
     private var searchTextCancellable: Cancellable?
     private let coordinator: SeriesCoordinatorProtocol
     private let useCase: SeriesUseCaseProtocol
@@ -44,8 +46,9 @@ final class SeriesViewModel: SeriesViewModelProtocol {
     }
     
     private func getSeries() {
+        lastGetSeriesTask?.cancel()
         loaderState.send(true)
-        Task {
+        lastGetSeriesTask = Task {
             do {
                 let seriesEntities = try await useCase.getSeries(contains: searchText, at: paginationOffset)
                 let seriesSections = seriesEntities.map { $0.asSeriesCollectionViewSection(delegate: self) }
@@ -88,7 +91,8 @@ extension SeriesViewModel: SeriesCollectionViewSectionDelegate {
     
     func seriesCollectionViewSection(_ section: SeriesCollectionViewSection, didExpandSeriesDetailsAt index: Int) {
         let seriesId = section.entity.seriesId
-        Task {
+        lastGetSeriesTask?.cancel()
+        lastSeriesDetailTask = Task {
             do {
                 let detailEntity = try await useCase.getSeriesDetail(by: seriesId)
                 section.updateDetails(with: detailEntity)
